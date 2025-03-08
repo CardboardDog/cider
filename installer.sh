@@ -67,15 +67,19 @@ if [ "$cont" != "y" ]; then
 	exit 1
 fi
 
+echo "wiping ${drive}"
+dd if=/dev/zero of=/dev/${drive}
 parted --script /dev/${drive} mklabel gpt
-parted --script /dev/${drive} mkpart "boot partition" fat32 1MiB 300MiB
-parted --script /dev/${drive} mkpart "root partition" ext4 300MiB 100%
+parted --script /dev/${drive} mkpart primary fat32 1MiB 300MiB
+parted --script /dev/${drive} mkpart primary ext4 300MiB 100%
 parted --script /dev/${drive} set 1 esp on
+mkfs.ext4 /dev/${drive}1
+mkfs.fat -F 32 /dev/${drive}2
 
 mount /dev/${drive}1 /mnt
 mount --mkdir /dev/${drive}2 /mnt/boot
 
-pacstrap -K /mnt base linux linux-firmware vim nano man-db man-pages texinfo NetworkManager parted
+pacstrap -K /mnt base linux linux-firmware vim nano man-db man-pages texinfo NetworkManager parted python3
 
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
