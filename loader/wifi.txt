@@ -1,0 +1,9 @@
+IN-USE  BSSID              SSID              MODE   CHAN  RATE        SIGNAL  BARS  SECURITY  
+        14:21:03:82:0C:A6  Luckyd0g_goodboy  Infra  11    130 Mbit/s  100     ▂▄▆█  WPA2      
+*       14:21:03:82:0C:A7  Luckyd0g_goodboy  Infra  48    540 Mbit/s  100     ▂▄▆█  WPA2      
+        1C:8B:76:A2:B0:15  Grove network     Infra  6     130 Mbit/s  60      ▂▄▆_  WPA2      
+        1C:8B:76:A2:B0:16  Grove network     Infra  100   540 Mbit/s  39      ▂▄__  WPA2      
+        3E:8B:76:A2:B0:16  --                Infra  100   540 Mbit/s  37      ▂▄__  WPA2      
+        34:19:4D:B3:E6:60  TMOBILE-1B84      Infra  1     540 Mbit/s  25      ▂___  WPA2 WPA3 
+        A6:97:5C:00:4D:35  VTECH_5864_4d35   Infra  6     65 Mbit/s   24      ▂___  WPA2      
+        BC:CA:B5:82:2E:00  TG1672G02         Infra  11    195 Mbit/s  22      ▂___  WPA2      
